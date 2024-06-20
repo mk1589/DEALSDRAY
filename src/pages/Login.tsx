@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Label } from "@/components/ui/label"
 import { Input } from '@/components/ui/input';
-
+import { Link } from "react-router-dom"
 const LoginPage = () => {
   return (
     <section className="flex justify-center items-center h-screen">
@@ -21,9 +21,20 @@ const LoginPage = () => {
           <Input id="password" type="password" required />
         </div>
       </CardContent>
+      
       <CardFooter>
+        <div className="w-full">
         <Button className="w-full">Sign in</Button>
+        <div className="mt-4 text-center text-sm">
+          Don't have an account?{" "}
+          <Link to={'/SignUp'} className="underline">
+            Sign Up
+          </Link>
+        </div>
+        </div>
+        
       </CardFooter>
+     
     </Card>
     </section>
   )
