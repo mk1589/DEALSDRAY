@@ -24,7 +24,10 @@ const LoginPage = () => {
       
       <CardFooter>
         <div className="w-full">
+        <Link to={'/'} className="underline">
         <Button className="w-full">Sign in</Button>
+          </Link>
+        
         <div className="mt-4 text-center text-sm">
           Don't have an account?{" "}
           <Link to={'/SignUp'} className="underline">
